@@ -1,0 +1,172 @@
+/* beggins section 2 */
+
+.section-2 {
+    padding-bottom: 50px;
+    height: 60vh;
+    margin: 80px;
+}
+
+.title-section-2 {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.row {
+    display: flex;
+}
+  
+.column {
+    flex: 1;
+    padding: 12px;
+    background-color: #f7f7fe;
+    border: 2px solid #5f41f2;
+    color: #333;
+    border-radius: 8px;
+    margin: 12px;
+    transition: all 0.3s ease-out; /* add a smooth transition to all properties */
+}
+
+.column:hover {
+    transform: scale(1.05); /* scale the element by 5% */
+}
+
+.column h4 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.column p {
+    margin-bottom: 8px;
+}
+
+.column i {
+    color: #333;
+    font-size: 20px;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .row {
+      flex-direction: column;
+    }
+}
+
+.problem-image {
+    width: 250px;
+    height: 150px;
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Set the left and right margin will automatically adjust the spacing to center the image. */;
+}
+
+/* Ends section 2 */
+
+/* beggins section 3 */
+
+.section-3 {
+    position: relative;
+}
+
+.step-by-step {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 50px 0;
+    position: relative;
+}
+
+.step-by-step::before {
+    content: "";
+    position: absolute;
+    top: 0; /* adjust this to position the line below the first circle */
+    bottom:0;
+    left: 50%;
+    width: 2px;
+    /* transform: translateX(-50%); */
+    background-color: #ccc;
+}
+    
+.step-line {
+    display: flex;
+    flex: 1; 
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
+.step-container {
+    display: flex;
+    flex: 1;
+    /* align-items: center; */
+    justify-content: space-between;
+    position: relative;
+    transition: all 0.3s ease-out; /* add a smooth transition to all properties */
+}
+
+.step {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px 0;
+    justify-content: center;
+    /* position: relative; */
+}
+  
+.step-number {
+    display: flex;
+    flex: 0 1 50px;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:#5f41f2;
+    color: #f2f2f2;
+    font-size: 24px;
+    font-weight: bold;
+    /* position: absolute; */
+    /* left: 48.3%; */
+    transform: translateY(-50%);
+}
+  
+.step-content {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    /* align-items: flex-start; */
+    max-width: 600px;
+    margin-left: 20px;
+}
+  
+.step-image {
+    display: flex;
+    flex:1;
+    justify-content: center;
+    width: 300px;
+    height: 180px;
+    border-radius: 80%;
+    margin: 35px 0px;
+}
+  
+.step-content h2 {
+    background: linear-gradient(to right, #5f41f2, #ffa756);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+  
+.step-content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Ends section 3 */
