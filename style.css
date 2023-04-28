@@ -583,6 +583,10 @@ button:hover {
     color: rgba(213, 109, 251, 1);
 }
 
+.item-mobile-p {
+    display: none;
+}
+
 .button-cta-dif-set {
     display: flex;
     align-items: center;
@@ -634,6 +638,14 @@ button:hover {
 
     .item {
         padding: 10px;
+    }
+    
+    .item-mobile-p {
+        display: initial;
+    }
+
+    .item-desktop-p {
+        display: none;
     }
 
     .button-cta-dif-set {
