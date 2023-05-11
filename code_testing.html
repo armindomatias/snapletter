@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <script src="js.code.testing/calculator.js"></script>
+    </head>
+    <body>
+        <div class="new-shit">
+            
+        </div>
+        <div class="calculator">
+            <form> 
+                <p class="result-calculator">Time saved per day: <span id="result"></span></p>
+                <label for="newsletter">How many newsletters?</label>
+                <input type="range" id="newsletter_count" name="newsletter" min="0" max="20" value="10">
+                <label for="reading_time">How many articles do you read every day?</label>
+                <input type="range" id="reading" name="reading_time" min="0" max="20" value="10">
+                <label for="videos_podcasts">How many videos/podcasts do you watch/hear every day?</label>
+                <input type="range" id="videos_podcasts" name="videos_podcasts" min="0" max="20" value="10">
+                <button onclick="timeSaved(event)">Calculate</button>
+            </form>
+        </div>
+    </body>
+</html>
