@@ -39,3 +39,31 @@
 
 
 /* End of Tabs */
+
+/* Step by Step 1 */
+
+.step-by-step-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-by-step-1 img {
+    width: 150px;
+}
+
+.source-images {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.source-images p {
+    text-align: center;
+}
+
+.target-image-div {
+    margin-bottom: 50px;
+}
+
+/* End Step by Step 1 */
