@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <script src="calculator.js"></script>
+        <script src="user_case_tabs.js"></script>
+        <link rel="stylesheet" href="style.test.css">
+    </head>
+    <body>
+        <div class="step-by-step-1">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+            <img src="images/logo-purple.png" alt="Target Image" class="target-image">  
+        </div>
+        <div class="user-case-tabs">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-content="tab1">Tab 1</button>
+                <button class="tab-button" data-content="tab2">Tab 2</button>
+                <button class="tab-button" data-content="tab3">Tab 3</button>
+            </div>
+            <div class="tab-contents">
+                <div class="tab-content active" id="tab1">Content of Tab 1</div>
+                <div class="tab-content" id="tab2">Content of Tab 2</div>
+                <div class="tab-content" id="tab3">Content of Tab 3</div>
+            </div>
+        </div>
+        <div class="calculator">
+            <form> 
+                <p class="result-calculator">Time saved per day: <span id="result"></span></p>
+                <label for="newsletter">How many newsletters?</label>
+                <input type="range" id="newsletter_count" name="newsletter" min="0" max="20" value="10">
+                <label for="reading_time">How many articles do you read every day?</label>
+                <input type="range" id="reading" name="reading_time" min="0" max="20" value="10">
+                <label for="videos_podcasts">How many videos/podcasts do you watch/hear every day?</label>
+                <input type="range" id="videos_podcasts" name="videos_podcasts" min="0" max="20" value="10">
+                <button onclick="timeSaved(event)">Calculate</button>
+            </form>
+        </div>
+    </body>
+</html>
