@@ -1,3 +1,13 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* This makes the anchor buttons links to make a smooth transition to the section linked */
+}
+
 /* Calculator */
 
 /* End of Calculator */
@@ -42,28 +52,325 @@
 
 /* Step by Step 1 */
 
-.step-by-step-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.step-container {
+    position: relative;
+    height: 45vh;
 }
 
-.step-by-step-1 img {
-    width: 150px;
+.step-container img {
+    position: absolute;
+    /* transition: all 0.5s ease; */
 }
 
-.source-images {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 50px;
+#leftImage {
+    left: 0px; /* Adjust the initial left position */
+    top: 0px; /* Adjust the initial top position */
+}
+  
+#middleImage {
+    left: 50%; /* Center the middle image horizontally */
+    transform: translateX(-50%);
+    top: 0px; /* Adjust the initial top position */
+}
+  
+#rightImage {
+    right: 0px; /* Adjust the initial right position */
+    top: 0px; /* Adjust the initial top position */
+}
+  
+#targetImage {
+    left: 50%; /* Center the target image horizontally */
+    transform: translateX(-50%);
+    bottom: 0px; /* Adjust the target position */
 }
 
-.source-images p {
-    text-align: center;
+#toSecondStep {
+    left: 50%; 
+    transform: translateX(-50%);
+    top: 0px; 
+    display: none;
 }
 
-.target-image-div {
-    margin-bottom: 50px;
+#toThirdStep {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0px; 
+    display: none;
+    width: 100px;
+}
+
+#toFourthStep {
+    left: 50%; 
+    transform: translateX(-50%);
+    top: 0px; 
+    display: none;
+    width: 100px;
+}
+
+.source-image {
+    width: 64px;
+}
+
+.target-image {
+    width: 100px;
 }
 
 /* End Step by Step 1 */
+
+.space-space {
+    height: 200vh;
+}
+
+
+
+
+
+/*Beggins Section 2*/
+
+.step-by-step {  /* create 2 colums for the section element */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.title-section-2 {
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    margin: 60px 10px 0 10px;
+}
+
+.subline-title-section-2 { 
+    text-align: center;
+    margin-top: 10px;
+}
+   
+.title-section-left { /* make the left side stick to the top which allows the right side to scroll */
+    height: 100vh;
+    display: grid;
+    position: sticky;
+    position: -webkit-sticky; /* Safari */
+    place-content: center;
+    top: 0;
+    margin-top: -230px; /* To compensate the vh height difference with the right section */
+    margin-bottom: 60px; /* To compensate the vh height difference with the right section */
+}
+
+.title-section-left h2 {
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    background: linear-gradient(137deg, #AC00FE 0%, #4301FF 100%) !important;
+    -webkit-background-clip: text;
+    padding: 8px;
+    margin-left: 50px;
+    margin-right: 40px;
+    border-radius: 14px;
+}
+
+.mobile-step-title-3 {
+    display: none;
+}
+
+@media screen and (max-width: 1023px) {
+
+    .title-section-2 {
+        font-size: 2em;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .title-section-left { 
+        display: none;
+    }
+
+    .mobile-step-title-3 {
+        display: initial;
+    }
+}
+
+.content-section-right {
+    height: 70vh;
+    width: 100%;
+    /* display: flex;
+    flex-direction: column; */
+    /* display: grid;
+    place-content: center; */
+}
+
+.step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    background: linear-gradient(137deg, #24BFFF 0%, #4301FF 100%);
+    color: #f2f2f2;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    position: absolute;
+    left: -60px;
+    top: 0px;
+}
+
+.step-number-mobile {
+    display: none;
+}
+
+.content-section-right-card {
+    position: relative;
+    padding: 25px;
+    /* margin: 50px; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s;
+}
+
+.content-section-right:hover{
+    .content-section-right-card {
+        background: linear-gradient(137deg, #4301FF 0%, #24BFFF 100%);
+        scale: 1.02;
+    }
+}
+
+.content-section-right h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.content-section-right img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    display: block;
+    margin: 0 auto;
+}
+
+.img-AI-section-2 {
+    height: 200px;
+    width: 350px;
+}
+
+.img-topics-section-2 {
+    height: 200px;
+    width: 300px;
+}
+
+.img-ranking-section-2 {
+    height: 250px;
+    width: 240px;
+}
+
+.img-summary-section-2 {
+    height: 250px;
+    width: 230px;
+}
+
+.content-section-right i {
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+@media screen and (max-width: 1023px) {
+
+    .step-by-step { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 15px;
+    }
+ 
+    .content-section-right { 
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .step-number-mobile {
+        margin: 100px auto 10px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 20%;
+        background: linear-gradient(137deg, #24BFFF 0%, #4301FF 100%);
+        color: #f2f2f2;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .step-number {
+        display: none;
+    }
+    
+    .content-section-right-card {
+        padding: 10px;
+        position: static;
+    }
+    
+    .content-section-right h3 {
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 5px;
+    }    
+}
+
+.final-part-section-2 {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.description-solution {
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    font-weight: 900;
+    background: linear-gradient(to right, #4301FF, #AC00FE) !important;
+    -webkit-background-clip: text;
+    padding: 10px;
+    border-radius: 14px;
+}
+
+.image-section-2 {
+    width: 850px;
+    height: 650px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1023px) {
+    .description-solution {
+        font-size: 2em;
+        margin: 100px 10px 10px 10px;
+        padding: 5px;
+    }
+
+    .image-section-2 {
+        width: 400px;
+        height: 300px;
+        margin: 30px auto;
+    }
+
+    .button-section-2 {
+        margin-bottom: 80px;
+    }    
+}
+
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    .image-section-2 {
+        width: 650px;
+        height: 550px;
+        margin: 0px auto;
+    }
+}
+
+/*End of Section 2 */

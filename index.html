@@ -27,10 +27,10 @@
 	<body>
 		<header>
 			<nav>
-				<img src="images/logo-navmenu-white.png" alt="Snapletter Logo" class="logo-menu">
+				<a href="/"><img src="images/logo-navmenu-white.png" alt="Snapletter Logo" class="logo-menu"></a>
 				<ul class="nav-menu-list">
 					<!-- <li class="nav-menu-list-items"><a href="root-relative-links/blog.html">Home</a></li> -->
-					<!-- <li class="nav-menu-list-items"><a href="root-relative-links/blog.html">Use Cases</a></li> -->
+					<li class="nav-menu-list-items"><a href="use.cases.html">Use Cases</a></li>
 					<li class="nav-menu-list-items but"><a href="javascript:void(0)" onclick="ml('show', 'qi6fy2', true)">Join Waitlist</a></li>
 				</ul>
 			</nav>
@@ -64,11 +64,11 @@
 						</div> -->
 					</div>
 				</div>
-				<div class="section-2">
+				<div class="section-2" id="stepByStep">
 					<h2 class="title-section-2">How Snapletter works?</h2>
 					<p class="subline-title-section-2">4 simple steps to success</p>
 					<div class="step-by-step">
-						<div class="title-section-left">
+						<div class="title-section-left" id="leftH2Section2">
 							<!-- <h2>Our AI takes all the content from your newsletters and...</h2> -->
 							<h2>Our AI takes all your reading and...</h2>
 						</div>
@@ -78,15 +78,27 @@
 								<div class="content-section-right-card">
 									<div class="step-number">1</div>
 									<h3 class="mobile-step-title-3">OUR AI TAKES ALL YOUR READING</h3>
-									<i class="fa-solid fa-wand-magic-sparkles"></i>
-									<img src="images/problem1.png" alt="Snapletter App AI" class="img-AI-section-2">
+									<!-- <i class="fa-solid fa-wand-magic-sparkles"></i> -->
+									<div class="step-container">
+										<p id="leftImageText">Links</p>
+										<img src="images/icon-links.png" alt="External Links" id="leftImage" class="source-image">
+										<p id="middleImageText">Newsletters</p>
+										<img src="images/icon-news.png" alt="Newsletters" id="middleImage" class="source-image">
+										<p id="rightImageText">Documents</p>
+										<img src="images/icon-pdf.png" alt="Others" id="rightImage" class="source-image">
+										<img src="images/logo-navmenu-white.png" alt="Target Image" id="targetImage" class="target-image"> 
+										<img src="images/icon-read-news.png" alt="2nd step" id="toSecondStep" class="to-next-step">
+										<img src="images/icon-dividetopics.png" alt="3rd step" id="toThirdStep" class="to-next-step">
+										<img src="images/icon-ranking.png" alt="4th step" id="toFourthStep" class="to-next-step">
+									</div>
+									<!-- <img src="images/problem1.png" alt="Snapletter App AI" class="img-AI-section-2"> -->
 								</div>
 							</div>
 							<div class="content-section-right">
 								<p class="step-number-mobile">2</p>
 								<div class="content-section-right-card">
 									<div class="step-number">2</div>
-									<h3>DIVIDES IT INTO TOPICS</h3> <!-- We can add here "Analyze it" in the first part-->
+									<h3 id="imgSecondStep">DIVIDES IT INTO TOPICS</h3> <!-- We can add here "Analyze it" in the first part-->
 									<i class="fa-solid fa-bezier-curve"></i>
 									<img src="images/app-topics-test.png" alt="Snapletter App Topics" class="img-topics-section-2">
 								</div>
@@ -95,7 +107,7 @@
 								<p class="step-number-mobile">3</p>
 								<div class="content-section-right-card">
 									<div class="step-number">3</div>
-									<h3>RANKS IT BASED ON<br>YOUR INTERESTS</h3>
+									<h3 id="imgThirdStep">RANKS IT BASED ON<br>YOUR INTERESTS</h3>
 									<i class="fa-solid fa-ranking-star"></i>
 									<img src="images/app-ranking.png" alt="Snapletter App Ranking" class="img-ranking-section-2">
 								</div>
@@ -104,7 +116,7 @@
 								<p class="step-number-mobile">4</p>
 								<div class="content-section-right-card">
 									<div class="step-number">4</div>
-									<h3>GENERATES A 1 MIN<br>SUMMARY</h3>
+									<h3 id="imgFourthStep">GENERATES A 1 MIN<br>SUMMARY</h3>
 									<i class="fa-solid fa-jet-fighter"></i>
 									<img src="images/app-summary.png" alt="Snapletter App Summary" class="img-summary-section-2">
 								</div>
@@ -169,6 +181,35 @@
 						</div>
 					</div>
 				</div>
+				<div class="calculator-section">
+					<h2 class="title-section-2">Save time with Snapletter, now.</h2>
+					<p class="subline-title-section-2">See how much time you will save by using Snapletter 🤯</p>
+					<div class="calc-sections">
+						<div class="calc-sec calc-sec-one">
+							<!-- <p>See how much time could you save by using Snapletter 🤯</p> -->
+						</div>
+						<div class="calc-sec calc-sec-two">
+							<form> 
+								<p class="result-calculator">Hours saved with Snapletter:</p>
+								<p id="result">?</p>
+								<label for="newsletter">Newsletters you receive?</label>
+								<input type="range" id="newsletter_count" name="newsletter" min="0" max="20" value="10" oninput="updateSliderValue(this.value)">
+								<p id="sliderValue">10</p>
+								<!-- Script to update the content of the slider value as you slide -->
+									<script>
+										function updateSliderValue(value) {
+											document.getElementById("sliderValue").textContent = value;
+										}
+									</script>
+								<!-- <label for="reading_time">How many articles do you read every day?</label>
+								<input type="range" id="reading" name="reading_time" min="0" max="20" value="10">
+								<label for="videos_podcasts">How many videos/podcasts do you watch/hear every day?</label>
+								<input type="range" id="videos_podcasts" name="videos_podcasts" min="0" max="20" value="10"> -->
+								<button onclick="timeSaved(event)" class="button-calculator">Calculate</button>
+							</form>
+						</div>
+					</div>
+				</div>
 				<div class="section-4">
 					<h2 class="title-section-3">Snapletter will change the way you read.</h2>
 					<div class="container-features">
@@ -204,10 +245,9 @@
 						</div>
 					</div>		
 				</div>
-				<div class="section-5 animate__animated animate__slideInUp">
+				<div class="section-5" id="endSection">
 					<img src="images/logo-purple.png" alt="Snapletter Logo" class="logo-footer">
 					<h2 class="title-section-2 title-5">Read smarter, not harder.</h2>
-					<!-- <p>If you feel like me, a lot of good content in your newsletters<br>but don't know how to read everything...</p> -->
 					<a class="button-waitlist button-section-5" href="javascript:void(0)" onclick="ml('show', 'qi6fy2', true)">Join Waitlist!</a>
 				</div>
 			</div>
@@ -216,6 +256,7 @@
 		<footer>
 			<div class="footer-wrapper">
 			  <p>&copy; 2023 Snapletter</p>
+			  <p class="blog-posts-footer"><a href="use.cases.html" target="_blank">Use Cases</a></p>
 			  <p class="blog-posts-footer"><a href="https://snapletter.notion.site/d4e46cf79f604abcb87091a9634ef64b?v=02d31dce7cbb4c90b799d0799a3a9dd2" target="_blank">Blog</a></p>
 			  <ul class="social-icons">
 				<li><a href="https://twitter.com/ArmindoMatias" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -223,6 +264,10 @@
 				<li><a href="mailto:snapletter.io@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
 			  </ul>
 			</div>
-		</footer>		  
+		</footer>	
+		<!-- Javascript Scripts -->
+		<script src="step1.js"></script>
+		<script src="calculator.js"></script>
+		<script src="intersection.obs.js"></script>		  
 	</body>
 </html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <script src="testing.code/calculator.js"></script>
+        <script src="testing.code/user_case_tabs.js"></script>
+        <link rel="stylesheet" href="testing.code/style.test.css">
+    </head>
+    <body>
+        <!-- <div class="step-by-step-1">
+            <div class="step-container">
+                <img src="images/app-mac-test2.png" alt="Newsletters" id="leftImage" class="source-image">
+                <img src="images/app-ranking.png" alt="External Links" id="middleImage" class="source-image">
+                <img src="images/app-topics-test.png" alt="Others" id="rightImage" class="source-image">
+                <img src="images/logo-purple.png" alt="Target Image" id="targetImage" class="target-image"> 
+            </div>
+        </div> -->
+        <div class="user-case-tabs">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-content="tab1">Tab 1</button>
+                <button class="tab-button" data-content="tab2">Tab 2</button>
+                <button class="tab-button" data-content="tab3">Tab 3</button>
+            </div>
+            <div class="tab-contents">
+                <div class="tab-content active" id="tab1">Content of Tab 1</div>
+                <div class="tab-content" id="tab2">Content of Tab 2</div>
+                <div class="tab-content" id="tab3">Content of Tab 3</div>
+            </div>
+        </div>
+        <div class="calculator">
+            <form> 
+                <p class="result-calculator">Time saved per day: <span id="result"></span></p>
+                <label for="newsletter">How many newsletters?</label>
+                <input type="range" id="newsletter_count" name="newsletter" min="0" max="20" value="10">
+                <!-- <label for="reading_time">How many articles do you read every day?</label>
+                <input type="range" id="reading" name="reading_time" min="0" max="20" value="10">
+                <label for="videos_podcasts">How many videos/podcasts do you watch/hear every day?</label>
+                <input type="range" id="videos_podcasts" name="videos_podcasts" min="0" max="20" value="10"> -->
+                <button onclick="timeSaved(event)">Calculate</button>
+            </form>
+        </div>
+        <!-- <div class="space-space"></div> -->
+        <div class="step-by-step" id="step">
+            <div class="title-section-left">
+                <!-- <h2>Our AI takes all the content from your newsletters and...</h2> -->
+                <h2>Our AI takes all your reading and...</h2>
+            </div>
+            <div class="c-sections-right">
+                <div class="content-section-right">
+                    <p class="step-number-mobile">1</p>
+                    <div class="content-section-right-card">
+                        <!-- <div class="step-number">1</div> -->
+                        <h3 class="mobile-step-title-3">OUR AI TAKES ALL YOUR READING</h3>
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <div class="step-container">
+                            <img src="images/icon-links.png" alt="External Links" id="leftImage" class="source-image">
+                            <img src="images/icon-news.png" alt="Newsletters" id="middleImage" class="source-image">
+                            <img src="images/icon-pdf.png" alt="Others" id="rightImage" class="source-image">
+                            <img src="images/logo-purple.png" alt="Target Image" id="targetImage" class="target-image"> 
+                            <img src="images/favicon.ico" alt="2nd step" id="toSecondStep" class="to-next-step">
+                            <img src="images/snapletter-social.png" alt="3rd step" id="toThirdStep" class="to-next-step">
+                            <img src="images/problem1.png" alt="4th step" id="toFourthStep" class="to-next-step">
+                        </div>
+                        <!-- <img src="images/problem1.png" alt="Snapletter App AI" class="img-AI-section-2"> -->
+                    </div>
+                </div>
+                <div class="content-section-right">
+                    <p class="step-number-mobile">2</p>
+                    <div class="content-section-right-card">
+                        <!-- <div class="step-number">2</div> -->
+                        <h3 id="imgSecondStep">DIVIDES IT INTO TOPICS</h3> <!-- We can add here "Analyze it" in the first part-->
+                        <i class="fa-solid fa-bezier-curve"></i>
+                        <img src="images/app-topics-test.png" alt="Snapletter App Topics" class="img-topics-section-2">
+                    </div>
+                </div>
+                <div class="content-section-right">
+                    <p class="step-number-mobile">3</p>
+                    <div class="content-section-right-card">
+                        <!-- <div class="step-number">3</div> -->
+                        <h3 id="imgThirdStep">RANKS IT BASED ON<br>YOUR INTERESTS</h3>
+                        <i class="fa-solid fa-ranking-star"></i>
+                        <img src="images/app-ranking.png" alt="Snapletter App Ranking" class="img-ranking-section-2">
+                    </div>
+                </div>
+                <div class="content-section-right">
+                    <p class="step-number-mobile">4</p>
+                    <div class="content-section-right-card">
+                        <!-- <div class="step-number">4</div> -->
+                        <h3 id="imgFourthStep">GENERATES A 1 MIN<br>SUMMARY</h3>
+                        <i class="fa-solid fa-jet-fighter"></i>
+                        <img src="images/app-summary.png" alt="Snapletter App Summary" class="img-summary-section-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="space-space"></div>
+        <script src="testing.code/step1.rootcode.js"></script>
+    </body>
+</html>
